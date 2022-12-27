@@ -3,12 +3,12 @@ services:
   samba:
     image: "servercontainers/samba:latest"
     restart: "unless-stopped"
-    container_name: "samba"
+    container_name: "samba2"
     ports:
-      - "137:137/udp"
-      - "138:138/udp"
-      - "139:139/tcp"
-      - "445:445"
+      - "9137:137/udp"
+      - "9138:138/udp"
+      - "9139:139/tcp"
+      - "9445:445"
     volumes:
       - "/mnt:/shares/Seagate"
     environment:
